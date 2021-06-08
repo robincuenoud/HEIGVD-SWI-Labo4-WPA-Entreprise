@@ -192,7 +192,7 @@ Dans cette première partie, vous allez analyser [une connexion WPA Entreprise](
 >
 > - b. Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
 >
-> **_Réponse:_** Non (pas dans EAP-PEAP). PEAP utilise un challenge response pour que le serveur puisse authentifier le client. Si c'était EAP-TLS alors le client enverrait un certficat au serveur. 
+> **_Réponse:_** Non (pas dans EAP-PEAP). PEAP utilise un challenge response pour que le serveur puisse authentifier le client. Si c'était EAP-TLS alors le client enverrait un certficat au serveur. Pour EAP-PEAP les deux sont possible (https://www.interlinknetworks.com/app_notes/eap-peap.htm) mais probablement pas.
 
 ---
 
