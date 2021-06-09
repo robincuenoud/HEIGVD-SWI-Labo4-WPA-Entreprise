@@ -12,6 +12,8 @@
 
 __A faire en équipes de deux personnes__
 
+@ Authors: Cuénoud Robin, Mülhauser Florian
+
 ### Objectif :
 
 1.	Analyser les étapes d’une connexion WPA Entreprise avec une capture Wireshark
@@ -180,7 +182,7 @@ Dans cette première partie, vous allez analyser [une connexion WPA Entreprise](
 
 > **_Question:_** Quelle méthode d’authentification est finalement utilisée ?
 > 
-> **_Réponse:_** EAP-PEAP (cf capture d'écran d'avant..)
+> **_Réponse:_** EAP-PEAP (cf capture d'écran d'avant)
 
 ---
 
@@ -188,11 +190,11 @@ Dans cette première partie, vous allez analyser [une connexion WPA Entreprise](
 >
 > - a. Le serveur envoie-t-il un certificat au client ? Pourquoi oui ou non ?
 >
-> **_Réponse:_** Le serveur envoie son certificat. Pour que le client puisse l'authentifier. 
+> **_Réponse:_** Le serveur envoie son certificat. Pour que le client puisse l'authentifier et ne pas se faire avoir par des evil twin attacks. Par contre théoriquement  
 >
 > - b. Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
 >
-> **_Réponse:_** Non (pas dans EAP-PEAP). PEAP utilise un challenge response pour que le serveur puisse authentifier le client. Si c'était EAP-TLS alors le client enverrait un certficat au serveur. Pour EAP-PEAP les deux sont possible (https://www.interlinknetworks.com/app_notes/eap-peap.htm) mais probablement pas.
+> **_Réponse:_** Non (pas dans EAP-PEAP). PEAP utilise un challenge response pour que le serveur puisse authentifier le client. Si c'était EAP-TLS alors le client enverrait un certficat au serveur. Pour EAP-PEAP on peux décider de l'implémanter, c'est possible (https://www.interlinknetworks.com/app_notes/eap-peap.htm) mais en général ça ne se fait pas. Effectivement on a vue dans le cours que l'authentification se fait en interne avec l'"Authentification Interne (EAP-MSCHAP-V2)". Donc c'est ce qui est fait ici, et le client envoi pas de certificat au serveur.
 
 ---
 
